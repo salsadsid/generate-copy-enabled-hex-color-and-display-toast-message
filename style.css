@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+body {
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#input-field {
+    font-size: 18px;
+    color: #43383e;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    background: #fff;
+    border-radius: 31px;
+    padding: 0 35px 0 35px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+#btn {
+    padding: 12px 25px;
+    font-size: 20px;
+    border-radius: 31px;
+    color: beige;
+    background-color: brown;
+    border: 3px solid #000;
+    cursor: pointer;
+}
+
+#btn:hover {
+    color: black;
+    background-color: beige;
+    transition: 0.4s ease-in-out;
+}
+
+#heading-text {
+    text-shadow: -1px 1px 2px rgb(255, 255, 255),
+        1px 1px 2px rgb(255, 255, 255),
+        1px -1px 0 rgb(255, 255, 255),
+        -1px -1px 0 rgb(255, 255, 255);
+    text-align: center;
+}
+
+#color-code {
+    text-shadow: -.5px .5px 1px rgb(255, 255, 255),
+        .5px .5px 1px rgb(255, 255, 255),
+        .5px -.5px 0 rgb(255, 255, 255),
+        -.5px -.5px 0 rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+}
+
+#copy-btn {
+    font-size: 30px;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px #fff;
+    color: brown;
+}
+
+.color-code-container {
+    margin-top: 30px;
+}
+
+#display-copy {
+    color: red;
+    font-size: 18px;
+}
+
+.toast-message {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: rgb(19, 201, 110);
+    color: #000;
+    border: 1px solid #fff;
+    border-radius: .25rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.toast-message-slide-in {
+    animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+    animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes toast-animation-out {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
