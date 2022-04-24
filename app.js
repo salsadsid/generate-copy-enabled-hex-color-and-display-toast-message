@@ -18,15 +18,29 @@ changeBtn.addEventListener('click', () => {
     container.style.backgroundColor = bgColor;
     inputField.value = bgColor;
 })
-
+let div = null;
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(inputField.value);
-    generateToastMessage(inputField.value + ' Copied')
+    if (div !== null) {
+        div.remove();
+        div = null;
+    }
+    generateToastMessage(inputField.value + ' Copied');
+
 })
 
 const generateToastMessage = (msg) => {
-    const div = document.createElement('div')
+    div = document.createElement('div')
     div.innerText = msg;
-    div.className = 'toast-message';
+    div.className = 'toast-message toast-message-slide-in';
+
+    div.addEventListener('click', () => {
+        div.classList.remove('toast-message-slide-in');
+        div.classList.add("toast-message-slide-out");
+        div.addEventListener('animationend', () => {
+            div.remove();
+            div = null;
+        })
+    })
     document.body.appendChild(div);
 }
