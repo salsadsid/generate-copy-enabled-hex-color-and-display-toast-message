@@ -8,17 +8,22 @@ const generateHexColor = () => {
     return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`
 }
 
+// References
 const changeBtn = document.getElementById("btn")
 const container = document.getElementById("container")
 const inputField = document.getElementById("input-field");
 const copyBtn = document.getElementById("copy-btn");
 
+// Chanage Color button click handler
 changeBtn.addEventListener('click', () => {
     const bgColor = generateHexColor()
     container.style.backgroundColor = bgColor;
     inputField.value = bgColor;
 })
+
 let div = null;
+
+// copy button click handler
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(inputField.value);
     if (div !== null) {
@@ -29,6 +34,7 @@ copyBtn.addEventListener('click', () => {
 
 })
 
+// dynamic toast message generator
 const generateToastMessage = (msg) => {
     div = document.createElement('div')
     div.innerText = msg;
