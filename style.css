@@ -20,6 +20,7 @@ body {
     border-radius: .25rem;
     border: #000;
     background-color: rgb(163, 158, 158);
+    width: 200px;
 }
 
 #input-container {
@@ -28,7 +29,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
-    width: 330px;
+    width: 280px;
 }
 
 #btn {
